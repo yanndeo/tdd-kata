@@ -25,43 +25,88 @@ describe('Feature: create  fn that takes in a natural number and returns a strin
   })
 
   describe('Rule 2: if the number is divisible by 5, return Buzz', () => {
-    test.each([{ input: 5 }, { input: 10 }, { input: 20 }])(
-      'should return Buzz, when input is: $input ',
-      ({ input }) => {
-        //arrange
-        //act
-        const expected = fizzBuzz(input)
-        //assert
-        expect(expected).toBe(value.buzz)
-      }
-    )
+    it('should return Buzz, when input is: 5 ', () => {
+      //arrange
+      const input = 5
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.buzz)
+    })
+
+    it('should return Buzz, when input is: 10 ', () => {
+      //arrange
+      const input = 10
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.buzz)
+    })
+
+    it('should return Buzz, when input is: 20 ', () => {
+      //arrange
+      const input = 20
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.buzz)
+    })
   })
 
   describe('Rule 2: if the number is divisible by 3 and 5, return FizzBuzz', () => {
-    test.each([{ input: 15 }, { input: 30 }, { input: 75 }, { input: 0 }])(
-      'should return FizzBuzz, when input is: $input ',
-      ({ input }) => {
-        //arrange
-        //const input = 15
-        //act
-        const expected = fizzBuzz(input)
-        //assert
-        expect(expected).toBe(value.fizz + '' + value.buzz)
-      }
-    )
+    it('should return FizzBuzz, when input is: 15 ', () => {
+      //arrange
+      const input = 15
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.fizz + '' + value.buzz)
+    })
+
+    it('should return FizzBuzz, when input is: 30 ', () => {
+      //arrange
+      const input = 30
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.fizz + '' + value.buzz)
+    })
+
+    it('should return FizzBuzz, when input is: 75 ', () => {
+      //arrange
+      const input = 75
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(value.fizz + '' + value.buzz)
+    })
   })
 
   describe('Rule 3: return number itself if not divisible by 3 and 5', () => {
-    test.each([{ input: 1 }, { input: 2 }, { input: 8 }])(
-      'should return 1, when input is: $input ',
-      ({ input }) => {
+    it('should return 1, when input is: 1 ', () => {
+      //arrange
+      const input = 1
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(input.toString())
+    })
+
+    it('should return 2, when input is: 2 ', () => {
+      //arrange
+      const input = 2
+      //act
+      const expected = fizzBuzz(input)
+      //assert
+      expect(expected).toBe(input.toString())
+    }),
+      it('should return 77, when input is: 77 ', () => {
         //arrange
-        // const input = 1
+        const input = 77
         //act
         const expected = fizzBuzz(input)
         //assert
         expect(expected).toBe(input.toString())
-      }
-    )
+      })
   })
 })
