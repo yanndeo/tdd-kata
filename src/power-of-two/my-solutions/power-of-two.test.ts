@@ -9,10 +9,8 @@ describe('Feature: Given a list of numbers it should return a new list of number
   ])('given $input should return new list [$expected', ({ input, expected }) => {
     //arrange
     const sut = createPowerOfTwo()
-
     //act
     const actual = sut.apply(input)
-    console.log(actual)
     //assert
     expect(actual).toEqual(expected)
   })
